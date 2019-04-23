@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FlyoutContainer from './containers/FlyoutContainer';
 
 const App: React.FC = () => {
   return (
@@ -8,19 +9,12 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          After successful sign in using the google account, user name will show up here!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <FlyoutContainer title="Google sign in"/>
       </header>
     </div>
   );
-}
+};
 
 export default App;
