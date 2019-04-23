@@ -29,7 +29,8 @@ const FlyoutContainer: React.FC<Props> = ({ title }) => {
 
     return (
         <div>
-            <button onClick={handleOnClickOpenLoginFlyout}>Open login flyout</button>
+            <GoogleAuthenticationContainer onFailure={handleAuthenticationFail} onSuccess={handleAuthenticationSuccess}/>
+            <div><button style={{ width: 150, height: 42, margin: 20 }} onClick={handleOnClickOpenLoginFlyout}>Open login flyout</button></div>
             <SlidingPane
                 isOpen={isPaneOpen}
                 title={title}
@@ -37,9 +38,10 @@ const FlyoutContainer: React.FC<Props> = ({ title }) => {
                 width='400px'
                 onRequestClose={handleOnClickCloseLoginFlyout}>
                 <div>
-                    <GoogleAuthenticationContainer onFailure={handleAuthenticationFail} onSuccess={handleAuthenticationSuccess}/>
+
                 </div>
             </SlidingPane>
+
         </div>
     )
 };
