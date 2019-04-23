@@ -2,8 +2,8 @@ import React from 'react';
 import GoogleLogin from 'react-google-login';
 
 type Props = {
-    onSuccess: () => void;
-    onFailure: () => void;
+    onSuccess: (res: any) => void;
+    onFailure: (err: any) => void;
 }
 
 const GoogleAuthenticationContainer: React.FC<Props> = ({ onSuccess, onFailure }) => {
